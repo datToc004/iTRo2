@@ -3,7 +3,7 @@
 	<head><base href="">
 		<meta charset="utf-8" />
 		<title>@yield('title')</title>
-		<base href="{{ asset('public/backend') }}/">
+		
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -28,23 +28,54 @@
 		<!--begin::Header Mobile-->
 		
 		<!--end::Header Mobile-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="d-flex flex-row flex-column-fluid page">
+				<!--begin::Aside-->
+				@include('backend.master.sidebar')
+				<!--end::Aside-->
+				<!--begin::Wrapper-->
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+					<!--begin::Header-->
+					@include('backend.master.header')
+					<!--end::Header-->
+					<!--begin::Content-->
+					@yield('content')
+					<!--end::Content-->
+					<!--begin::Footer-->
+					@include('backend.master.footer')
+					<!--end::Footer-->
+				</div>
+				<!--end::Wrapper-->
+				
+			</div>
+			<!--end::Page-->
+		</div>
 		
 		<!--end::Main-->
 		<!-- begin::Notifications Panel-->
-		<div class="d-flex flex-column flex-root">
-            <!--begin::Page-->
-            <div class="d-flex flex-row flex-column-fluid page">
-                <!--begin::Aside-->
-                @include('backend.master.sidebar')
-                <!--end::Aside-->
-                <!--begin::Wrapper-->
-                @include('backend.master.header')
-                <!--end::Wrapper-->
-                @yield('content')
-            </div>
-            <!--end::Page-->
-        </div>
-		@include('backend.master.footer')
+		
+		<!-- end::Notifications Panel-->
+		<!--begin::Quick Actions Panel-->
+		
+		<!--end::Quick Actions Panel-->
+		<!-- begin::User Panel-->
+		
+		<!-- end::User Panel-->
+		<!--begin::Quick Panel-->
+		
+		<!--end::Quick Panel-->
+		<!--begin::Chat Panel-->
+		
+		<!--end::Chat Panel-->
+		<!--begin::Scrolltop-->
+		
+		<!--end::Scrolltop-->
+		<!--begin::Sticky Toolbar-->
+		
+		<!--end::Sticky Toolbar-->
+		<!--begin::Demo Panel-->
+		
 		<!--end::Demo Panel-->
 		<script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script>
 		<!--begin::Global Config(global config for global JS scripts)-->
